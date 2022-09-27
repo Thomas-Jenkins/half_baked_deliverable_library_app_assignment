@@ -4,9 +4,10 @@ import { useParams, Link } from 'react-router-dom';
 
 
 function BookDetail() {
-  const { id } = useParams();
+  const params = useParams();
   // const id = 1; // TODO: Use id from route
-  const { book, loading, error } = useBookDetail(id);
+  
+  const { book, loading, error } = useBookDetail(params);
 
   if (error)
     return (
