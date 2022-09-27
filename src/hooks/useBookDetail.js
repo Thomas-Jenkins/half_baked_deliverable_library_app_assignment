@@ -5,12 +5,12 @@ export function useBookDetail({ id }) {
   const [book, setBook] = useState();
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
-  console.log('id', id);
+  // console.log('id', id);
   useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await getBookById(id);
-        console.log('data', data);
+        // console.log('data', data);
         setBook(data);
         setLoading(false);
       } catch (e) {
